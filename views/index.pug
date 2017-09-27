@@ -1,0 +1,26 @@
+﻿extends layout
+
+block content
+  h1.welcome#welcome= greeting
+  p.text Welcome to #{location}'s guest network!
+  p.text For access to the interwebs, please login and add me on social media using the buttons below.
+  
+block socialMedia
+    - var fb = ['fa', 'fa-facebook', 'fa-2x']
+    - var ig = ['fa', 'fa-instagram', 'fa-2x']
+    - var li = ['fa', 'fa-linkedin', 'fa-2x']
+    - var tw = ['fa', 'fa-twitter', 'fa-2x']
+    - var g = ['fa', 'fa-google', 'fa-2x']
+
+    -var link = {fb: 'https://www.facebook.com/', ig: 'https://www.instagram.com/?hl=en', li: 'https://www.instagram.com/?hl=en', tw: 'https://twitter.com/', g: 'https://www.google.com/'}
+    a(class=fb target='_blank' href=link.fb)
+    a(class=ig target='_blank' href=link.ig)
+    a(class=li target='_blank' href=link.li)
+    a(class=tw target='_blank' href=link.tw)
+    a(class=g target='_blank' href=link.g)
+
+    p.text Happy Browsing!
+
+block footer
+    p.footer Brought to you by the guy in 81D! For more coding projects check out my <a href="https://github.com/Kavinci" target="_blank">GitHub</a>
+    p.footer.xsm Copyright &copy; #{today.getFullYear()}
